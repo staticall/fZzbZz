@@ -20,6 +20,12 @@ foreach($numbers as $num)
   {
     echo 'FizzBuzz';
   }
+  else
+  {
+    echo $num;
+  }
+
+  echo "\r\n";
 }
 
 // PHP script go to heaven

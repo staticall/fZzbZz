@@ -21,11 +21,13 @@ foreach($numbers as $num)
   }
 
   // If we got any word (number % 3 or % 5 or % 3 and % 5)
-  if($str)
+  if(!$str)
   {
-    // Output it in this format: "%num%: %str%". You can change it, if you got that brainz thingy
-    echo $num .': '. $str ."\r\n";
+    $str = $num;
   }
+
+  // Output it in this format: "%num%: %str%". You can change it, if you got that brainz thingy
+  echo $str ."\r\n";
 }
 
 // PHP script go to heaven

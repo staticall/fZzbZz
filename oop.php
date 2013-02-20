@@ -87,9 +87,14 @@ class fizzBuzz
         $data .= 'Buzz';
       }
 
+      if(!$data)
+      {
+        $data = $number;
+      }
+
       if($data)
       {
-        $output .= $number .': '. $data . "\r\n";
+        $output .= $data . "\r\n";
       }
     }
 
