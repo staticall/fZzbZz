@@ -29,6 +29,3 @@ foreach($numbers as $num)
   // Output it in this format: "%num%: %str%". You can change it, if you got that brainz thingy
   echo $str ."\r\n";
 }
-
-// PHP script go to heaven
-exit(1);

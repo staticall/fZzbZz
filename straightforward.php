@@ -27,6 +27,3 @@ foreach($numbers as $num)
 
   echo "\r\n";
 }
-
-// PHP script go to heaven
-exit(1);
