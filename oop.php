@@ -6,8 +6,21 @@ class fizzBuzz
 
   protected $_numbers = array();
 
+  /**
+   * Class constructor
+   *
+   * @param mixed $min Min. Can be an array with 2 values
+   * @param mixed $max Max
+   * @return fizzBuzz Current class instance
+   * @throws Exception
+   */
   public function __construct($min = null, $max = null)
   {
+    if($min === null && $max === null)
+    {
+      return $this;
+    }
+
     if(empty($min))
     {
       $min = 1;
@@ -57,6 +70,11 @@ class fizzBuzz
     $this->_prepareNumbers();
   }
 
+  /**
+   * Prepares $this->_numbers array with passed $this->_min and $this->_max
+   *
+   * @return fizzBuzz
+   */
   protected function _prepareNumbers()
   {
     $this->_numbers = range($this->_min, $this->_max);
@@ -64,6 +82,12 @@ class fizzBuzz
     return $this;
   }
 
+  /**
+   * Output numbers in correct format. You can pass your own numbers
+   *
+   * @param array $numbers In case you want to use different numbers
+   * @return fizzBuzz
+   */
   public function execute(array $numbers = array())
   {
     if(empty($numbers))
@@ -99,6 +123,8 @@ class fizzBuzz
     }
 
     echo $output;
+
+    return $this;
   }
 }
 

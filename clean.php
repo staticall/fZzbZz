@@ -20,12 +20,12 @@ foreach($numbers as $num)
     $str .= 'Buzz';
   }
 
-  // If we got any word (number % 3 or % 5 or % 3 and % 5)
+  // If we don't got any word
   if(!$str)
   {
     $str = $num;
   }
 
-  // Output it in this format: "%num%: %str%". You can change it, if you got that brainz thingy
+  // Output it in this format: "%str%\n". You can change it, if you got that brainz thingy
   echo $str ."\r\n";
 }
